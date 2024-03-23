@@ -32,6 +32,7 @@ rules:
         - .js
         - .jsx
   react/jsx-props-no-spreading: 'off'
+  'react/prop-types': 'off'
   react/require-default-props: 'off'
   react/static-property-placement:
     - error
@@ -48,6 +49,7 @@ rules:
   quotes:
     - error
     - single
+    - backstick
   semi:
     - error
     - always
