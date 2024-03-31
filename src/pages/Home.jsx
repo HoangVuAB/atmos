@@ -87,9 +87,7 @@ export const Home = () => {
   const clouds = useMemo(
     () => [
       // STARTING
-      {
-        position: new THREE.Vector3(-3.5, -3.2, -7),
-      },
+
       {
         position: new THREE.Vector3(3.5, -4, -10),
       },
@@ -102,6 +100,7 @@ export const Home = () => {
         scale: new THREE.Vector3(2.5, 2.5, 2.5),
         position: new THREE.Vector3(10, -1.2, -52),
       },
+
       // FIRST POINT
       {
         scale: new THREE.Vector3(4, 4, 4),
@@ -120,15 +119,7 @@ export const Home = () => {
         ),
         rotation: new THREE.Euler(0, Math.PI / 7, 0),
       },
-      {
-        rotation: new THREE.Euler(0, Math.PI / 7, Math.PI / 5),
-        scale: new THREE.Vector3(5, 5, 5),
-        position: new THREE.Vector3(
-          curvePoints[1].x - 13,
-          curvePoints[1].y + 4,
-          curvePoints[1].z - 62
-        ),
-      },
+
       {
         rotation: new THREE.Euler(Math.PI / 2, Math.PI / 2, Math.PI / 3),
         scale: new THREE.Vector3(5, 5, 5),
@@ -163,15 +154,7 @@ export const Home = () => {
           curvePoints[2].z - 26
         ),
       },
-      {
-        scale: new THREE.Vector3(4, 4, 4),
-        position: new THREE.Vector3(
-          curvePoints[2].x + 12,
-          curvePoints[2].y + 1,
-          curvePoints[2].z - 86
-        ),
-        rotation: new THREE.Euler(Math.PI / 4, 0, Math.PI / 3),
-      },
+
       // THIRD POINT
       {
         scale: new THREE.Vector3(3, 3, 3),
@@ -199,15 +182,7 @@ export const Home = () => {
         ),
         rotation: new THREE.Euler(Math.PI, 0, Math.PI / 5),
       },
-      {
-        scale: new THREE.Vector3(5, 5, 5),
-        position: new THREE.Vector3(
-          curvePoints[3].x + 0,
-          curvePoints[3].y - 5,
-          curvePoints[3].z - 98
-        ),
-        rotation: new THREE.Euler(0, Math.PI / 3, 0),
-      },
+
       // FOURTH POINT
       {
         scale: new THREE.Vector3(2, 2, 2),
@@ -226,15 +201,7 @@ export const Home = () => {
         ),
         rotation: new THREE.Euler(Math.PI / 4, 0, Math.PI / 5),
       },
-      {
-        scale: new THREE.Vector3(3, 3, 3),
-        position: new THREE.Vector3(
-          curvePoints[4].x - 4,
-          curvePoints[4].y + 9,
-          curvePoints[4].z - 62
-        ),
-        rotation: new THREE.Euler(Math.PI / 3, 0, Math.PI / 3),
-      },
+
       // FINAL
       {
         scale: new THREE.Vector3(3, 3, 3),
@@ -447,8 +414,8 @@ export const Home = () => {
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: '#424242',
-      colorB: '#ffcc00',
+      colorA: '#81316c',
+      colorB: '#ffff00',
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
