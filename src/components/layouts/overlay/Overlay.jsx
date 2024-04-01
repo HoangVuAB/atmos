@@ -6,6 +6,7 @@ export const Overlay = () => {
 
   const { start, end, setStart, hasScroll } = usePlay();
 
+  console.log(end);
   return (
     <div
       className={`overlay ${start ? 'overlay--disable' : ''} ${
@@ -26,7 +27,9 @@ export const Overlay = () => {
               <div className="spinner__image" />
             </div>
           </h1>
-          <p className="intro__scroll">Scroll to begin the journey</p>
+          <p className="intro__scroll">{`${
+            !end ? 'Scroll to start travel' : ''
+          }  `}</p>
           <button
             className="explore"
             onClick={() => {
@@ -39,7 +42,7 @@ export const Overlay = () => {
       )}
 
       <div className={`outro ${end ? 'outro--appear' : ''}`}>
-        <p className="outro__text">Wish you had a great flight with us...</p>
+        <p className="outro__text">End animation</p>
       </div>
     </div>
   );

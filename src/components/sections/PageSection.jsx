@@ -1,10 +1,12 @@
 import { usePlay } from '../../contexts/Play';
-import { AsianHouse } from '../models/pages/AsianHouse';
+import { Torri } from '../models/pages/Toori';
+// import { AsianHouse } from '../models/pages/AsianHouse';
 
 export const PageSection = ({ ...props }) => {
   return (
     <group {...props}>
-      <AsianHouse />
+      {/* <AsianHouse /> */}
+      <Torri />
     </group>
   );
 };

@@ -50,23 +50,23 @@ export const Home = () => {
       {
         cameraRailDist: -1,
         position: new THREE.Vector3(
-          curvePoints[1].x - 3,
-          curvePoints[1].y - 2,
+          curvePoints[1].x + 0.75,
+          curvePoints[1].y - 2.25,
           curvePoints[1].z
         ),
       },
       {
         cameraRailDist: 1.5,
         position: new THREE.Vector3(
-          curvePoints[2].x + 2,
-          curvePoints[2].y - 2,
+          curvePoints[2].x - 1,
+          curvePoints[2].y - 2.5,
           curvePoints[2].z
         ),
       },
       {
         cameraRailDist: -1,
         position: new THREE.Vector3(
-          curvePoints[3].x - 3,
+          curvePoints[3].x + 1.25,
           curvePoints[3].y - 2,
           curvePoints[3].z
         ),
@@ -74,7 +74,7 @@ export const Home = () => {
       {
         cameraRailDist: 1.5,
         position: new THREE.Vector3(
-          curvePoints[4].x + 3.5,
+          curvePoints[4].x + 1.25,
           curvePoints[4].y - 2,
           curvePoints[4].z - 12
         ),
@@ -293,7 +293,7 @@ export const Home = () => {
       if (distance < FRICTION_DISTANCE) {
         friction = Math.max(distance / FRICTION_DISTANCE, 0.1);
         const targetCameraRailPosition = new THREE.Vector3(
-          (1.5 + distance / FRICTION_DISTANCE) * pageSection.cameraRailDist,
+          (1 + distance / FRICTION_DISTANCE) * pageSection.cameraRailDist,
           -1,
           0
         );
@@ -467,7 +467,7 @@ export const Home = () => {
   return useMemo(
     () => (
       <>
-        {/* <OrbitControls enableZosom={false} /> */}
+        {/* <OrbitControls enableZoom={false} /> */}
 
         <directionalLight position={[0, 2, 1]} intensity={0.9} />
         <group ref={cameraGroup}>
